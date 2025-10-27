@@ -3,10 +3,281 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NNG - IT Solutions & More</title>
+    <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/553aa1cce4b06f8ca0c4e312/1593247470146-789G2426D7T7J4QQMRE8/favicon.ico?format=100w">
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1 class="bg-red-500">Lorem</h1>
+<body class="antialiased" style="font-family: 'Poppins', sans-serif;">
+    <!-- Navbar -->
+    <nav class="bg-white sticky top-0 z-50">
+        <div class="w-full">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div>
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/images/nng-logo.webp" alt="Logo" class="h-15 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex items-center gap-10 pr-20">
+                    <!-- Home -->
+                    <li>
+                        <a href="#" class="text-red-500 uppercase" style="font-size: 15px; font-weight: 500;">H O M E</a>
+                    </li>
+                    
+                    <!-- Services Dropdown -->
+                    <li class="group relative">
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase flex items-center gap-1 transition-colors" style="font-size: 15px; font-weight: 500;">
+                            S E R V I C E S <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 w-64 py-3">
+                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">SOFTWARE DEVELOPMENT</a></li>
+                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">GENAI DEVELOPMENT</a></li>
+                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">MICROSOFT SOLUTIONS</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Our Work -->
+                    <li>
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">O U R &nbsp W O R K</a>
+                    </li>
+                    
+                    <!-- Testimonials -->
+                    <li>
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">T E S T I M O N I A L S</a>
+                    </li>
+                    
+                    <!-- About -->
+                    <li>
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">A B O U T</a>
+                    </li>
+                    
+                    <!-- Blog -->
+                    <li>
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">B L O G</a>
+                    </li>
+
+                    <!-- Contact -->
+                    <li>
+                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">C O N T A C T</a>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileToggle" class="md:hidden flex flex-col gap-1 p-1">
+                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden pb-5">
+                <ul class="space-y-1">
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">HOME</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <button id="servicesMobileToggle" class="w-full flex items-center justify-between py-3 text-gray-800 hover:text-red-500 font-medium">
+                            SERVICES
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <ul id="servicesMobileMenu" class="hidden pl-4 space-y-1">
+                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">SOFTWARE DEVELOPMENT</a></li>
+                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">GENAI DEVELOPMENT</a></li>
+                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">MICROSOFT SOLUTIONS</a></li>
+                        </ul>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">OUR WORK</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">TESTIMONIALS</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">ABOUT</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative flex items-center justify-center text-white w-full" style="height: 655.609px;">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="assets/images/bg1.webp" alt="Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0" style="background-color: rgba(19, 22, 22, 0.6);"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-5 max-w-4xl mx-auto">
+            <h1 class="mb-6 text-white" style="font-family: 'Poppins', sans-serif; font-size: 60px; line-height: 66px; letter-spacing: -1.2px">
+                IT Solutions to Drive Results
+            </h1>
+            <p class="text-white my-5" style="font-family: 'Poppins', sans-serif; font-size: 26px; line-height: 40px; letter-spacing: 0px; margin: 20px 0px;">
+                Experience an IT Solutions agency that puts your business goals and needs at the forefront.
+            </p>
+            <a href="#" class="inline-block border-2 border-white px-11 py-4 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300" style="font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 22.5px; letter-spacing: 0.3px;">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <!-- Introduction Text -->
+            <div class="text-center mb-16">
+                <h1 class="text-gray-800 leading-tight mx-auto" style="font-family: 'Poppins', sans-serif; font-size: 32px;">
+                    NNG strives to be more than just an IT outsourcing vendor, <br>we aim to be a strategic partner with a vested interest <br>in your long-term goals.
+                </h1>
+            </div>
+
+            <!-- Horizontal Rule -->
+            <div class="text-center mb-16">
+                <hr class="border-gray-300 max-w-4xl mx-auto">
+            </div>
+
+            <!-- Our Services Title -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">
+                    Our Services
+                </h1>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-3">
+                <!-- Software Development -->
+                <div class="text-center">
+                    <div style="padding: 17px;">
+                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                            Software Development
+                        </h2>
+                    </div>
+                    <div class="mb-6 flex justify-center" style="padding: 17px;">
+                        <img src="assets/images/service-icon-1.webp" alt="Software Development" class="w-50 h-40 object-contain">
+                    </div>
+                    <div style="padding: 17px; border-radius: 8px;">
+                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
+                            Our team of talented developers and designers will help you define your<br> software development project's <br>scope and see the project through <br>from start to finish.
+                        </p>
+                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
+                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GenAI Development -->
+                <div class="text-center">
+                    <div style="padding: 17px;">
+                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                            GenAI Development
+                        </h2>
+                    </div>
+                    <div class="mb-6 flex justify-center" style="padding: 17px;">
+                        <img src="assets/images/service-icon-2.webp" alt="GenAI Development" class="w-50 h-40 object-contain" style="background: transparent; mix-blend-mode: multiply;">
+                    </div>
+                    <div style="padding: 17px; border-radius: 8px;">
+                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
+                            GenAI has transformed technology<br> and challenged businesses. At NNG,<br> GenAI development helps companies<br> to achieve efficiency, innovation, and competitive advantages
+                        </p>
+                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
+                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Microsoft Solutions -->
+                <div class="text-center">
+                    <div style="padding: 17px;">
+                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                            Microsoft Solutions
+                        </h2>
+                    </div>
+                    <div class="mb-6 flex justify-center" style="padding: 17px;">
+                        <img src="assets/images/service-icon-3.webp" alt="Microsoft Solutions" class="w-50 h-40 object-contain" style="background: transparent; mix-blend-mode: multiply;">
+                    </div>
+                    <div style="padding: 17px; border-radius: 8px;">
+                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
+                            We utilize Microsoft technologies to<br> assist businesses in optimizing ICT<br> solutions, enhancing security, and <br>driving digital and AI transformation, <br>ensuring long-term success.
+                        </p>
+                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
+                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="relative flex items-center justify-center text-white w-full" style="height: 650px;">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="assets/images/testimonials.webp" alt="Testimonial Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-8 max-w-4xl mx-auto">
+            <h2 style="font-family: 'Poppins', sans-serif; font-size: 60px;">
+                Customers are saying...
+            </h2>
+            
+            <blockquote class="mb-5 mt-5" style="font-family: 'Poppins', sans-serif; font-size: 26px;">
+                I have had a great experience working with the NNG team for the past three years. They are always responsive and show great leadership.
+            </blockquote>
+            
+            <p class="mb-5 mt-5" style="font-family: 'Poppins', sans-serif; font-size: 26px;">
+                Hanh Nguyen | CEO VBA-ADK Vietnam
+            </p>
+            
+            <button class="border-2 border-white px-8 py-3 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer mb-4 mt-4" style="font-family: 'Poppins', sans-serif;">
+                MORE
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const spans = mobileToggle.querySelectorAll('span');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Animate hamburger icon
+            if (!mobileMenu.classList.contains('hidden')) {
+                spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Services mobile dropdown toggle
+        const servicesMobileToggle = document.getElementById('servicesMobileToggle');
+        const servicesMobileMenu = document.getElementById('servicesMobileMenu');
+        
+        servicesMobileToggle.addEventListener('click', () => {
+            servicesMobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

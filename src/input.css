@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@theme {
+  --color-red-500: rgb(218, 37, 29);
+}
+
+/* Global text selection styling */
+::selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #000000;
+  color: #ffffff;
+}
