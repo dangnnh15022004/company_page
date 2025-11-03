@@ -11,273 +11,316 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased" style="font-family: 'Poppins', sans-serif;">
+<body class="antialiased font-['Poppins']">
     <!-- Navbar -->
     <nav class="bg-white sticky top-0 z-50">
-        <div class="w-full">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div>
-                    <a href="index.html" class="flex items-center">
-                        <img src="assets/images/nng-logo.webp" alt="Logo" class="h-15 w-auto">
+        <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div>
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/images/nng-logo.webp" alt="Logo" class="h-15 w-auto">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center gap-10 pr-20">
+                <!-- Home -->
+                <li>
+                    <a href="index.html" class="text-gray-800 hover:text-red-500 uppercase text-[15px] font-medium">H O M E</a>
+                </li>
+                
+                <!-- Services Dropdown -->
+                <li class="group relative">
+                    <a href="software-development.html" class="text-gray-800 hover:text-red-500 uppercase flex items-center gap-1 transition-colors text-[15px] font-medium">
+                        S E R V I C E S <i class="fas fa-chevron-down text-xs"></i>
                     </a>
-                </div>
+                    <ul class="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 w-64 py-3">
+                        <li><a href="software-development.html" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">SOFTWARE DEVELOPMENT</a></li>
+                        <li><a href="genai-development.html" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">GENAI DEVELOPMENT</a></li>
+                        <li><a href="microsoft-solutions.html" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">MICROSOFT SOLUTIONS</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Our Work -->
+                <li>
+                    <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors text-[15px] font-medium">O U R &nbsp W O R K</a>
+                </li>
+                
+                <!-- Testimonials -->
+                <li>
+                    <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors text-[15px] font-medium">T E S T I M O N I A L S</a>
+                </li>
+                
+                <!-- About -->
+                <li>
+                    <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors text-[15px] font-medium">A B O U T</a>
+                </li>
+                
+                <!-- Blog -->
+                <li>
+                    <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors text-[15px] font-medium">B L O G</a>
+                </li>
 
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex items-center gap-10 pr-20">
-                    <!-- Home -->
-                    <li>
-                        <a href="#" class="text-red-500 uppercase" style="font-size: 15px; font-weight: 500;">H O M E</a>
-                    </li>
-                    
-                    <!-- Services Dropdown -->
-                    <li class="group relative">
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase flex items-center gap-1 transition-colors" style="font-size: 15px; font-weight: 500;">
-                            S E R V I C E S <i class="fas fa-chevron-down text-xs"></i>
-                        </a>
-                        <ul class="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 w-64 py-3">
-                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">SOFTWARE DEVELOPMENT</a></li>
-                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">GENAI DEVELOPMENT</a></li>
-                            <li><a href="#" class="block px-5 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-red-500 hover:pl-6 transition-all whitespace-nowrap">MICROSOFT SOLUTIONS</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- Our Work -->
-                    <li>
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">O U R &nbsp W O R K</a>
-                    </li>
-                    
-                    <!-- Testimonials -->
-                    <li>
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">T E S T I M O N I A L S</a>
-                    </li>
-                    
-                    <!-- About -->
-                    <li>
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">A B O U T</a>
-                    </li>
-                    
-                    <!-- Blog -->
-                    <li>
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">B L O G</a>
-                    </li>
-
-                    <!-- Contact -->
-                    <li>
-                        <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors" style="font-size: 15px; font-weight: 500;">C O N T A C T</a>
-                    </li>
-                </ul>
-
-                <!-- Mobile Menu Toggle -->
-                <button id="mobileToggle" class="md:hidden flex flex-col gap-1 p-1">
-                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 transition-all duration-300"></span>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden hidden pb-5">
-                <ul class="space-y-1">
-                    <li class="border-b border-gray-200">
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">HOME</a>
-                    </li>
-                    <li class="border-b border-gray-200">
-                        <button id="servicesMobileToggle" class="w-full flex items-center justify-between py-3 text-gray-800 hover:text-red-500 font-medium">
-                            SERVICES
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </button>
-                        <ul id="servicesMobileMenu" class="hidden pl-4 space-y-1">
-                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">SOFTWARE DEVELOPMENT</a></li>
-                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">GENAI DEVELOPMENT</a></li>
-                            <li><a href="#" class="block py-2 text-sm text-gray-600 hover:text-red-500">MICROSOFT SOLUTIONS</a></li>
-                        </ul>
-                    </li>
-                    <li class="border-b border-gray-200">
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">OUR WORK</a>
-                    </li>
-                    <li class="border-b border-gray-200">
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">TESTIMONIALS</a>
-                    </li>
-                    <li class="border-b border-gray-200">
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">ABOUT</a>
-                    </li>
-                    <li class="border-b border-gray-200">
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">BLOG</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-3 text-gray-800 hover:text-red-500 font-medium">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
+                <!-- Contact -->
+                <li>
+                    <a href="#" class="text-gray-800 hover:text-red-500 uppercase transition-colors text-[15px] font-medium">C O N T A C T</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative flex items-center justify-center text-white w-full" style="height: 655.609px;">
+    <section class="relative flex items-center justify-center text-white w-full h-[655.609px]">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0">
             <img src="assets/images/bg1.webp" alt="Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0" style="background-color: rgba(19, 22, 22, 0.6);"></div>
+            <div class="absolute inset-0 bg-[rgba(19,22,22,0.6)]"></div>
         </div>
         
         <!-- Content -->
         <div class="relative z-10 text-center px-5 max-w-4xl mx-auto">
-            <h1 class="mb-6 text-white" style="font-family: 'Poppins', sans-serif; font-size: 60px; line-height: 66px; letter-spacing: -1.2px">
+            <h1 class="mb-6 text-white text-[60px] leading-[66px] tracking-[-1.2px]">
                 IT Solutions to Drive Results
             </h1>
-            <p class="text-white my-5" style="font-family: 'Poppins', sans-serif; font-size: 26px; line-height: 40px; letter-spacing: 0px; margin: 20px 0px;">
+            <p class="text-white my-5 text-[26px] leading-[40px] tracking-[0px]">
                 Experience an IT Solutions agency that puts your business goals and needs at the forefront.
             </p>
-            <a href="#" class="inline-block border-2 border-white px-11 py-4 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300" style="font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 22.5px; letter-spacing: 0.3px;">
+            <a href="#" class="inline-block border-2 border-white px-11 py-4 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300 text-[15px] leading-[22.5px] tracking-[0.3px]">
                 Learn More
             </a>
         </div>
     </section>
 
     <!-- Our Services Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-8">
+    <section class="mx-[209.5px] py-30 px-8">
+        <div class="max-w-[1084px] mx-auto">
             <!-- Introduction Text -->
             <div class="text-center mb-16">
-                <h1 class="text-gray-800 leading-tight mx-auto" style="font-family: 'Poppins', sans-serif; font-size: 32px;">
-                    NNG strives to be more than just an IT outsourcing vendor, <br>we aim to be a strategic partner with a vested interest <br>in your long-term goals.
+                <h1 class="text-gray-800 leading-tight text-[32px] max-w-4xl mx-auto">
+                    NNG strives to be more than just an IT outsourcing vendor, we aim to be a strategic partner with a vested interest in your long-term goals.
                 </h1>
             </div>
 
             <!-- Horizontal Rule -->
-            <div class="text-center mb-16">
-                <hr class="border-gray-300 max-w-4xl mx-auto">
+            <div class="mb-16">
+                <hr class="border-t border-gray-300 my-12">
             </div>
 
             <!-- Our Services Title -->
             <div class="text-center mb-16">
-                <h1 class="text-4xl font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">
+                <h1 class="text-4xl text-gray-800">
                     Our Services
                 </h1>
             </div>
 
             <!-- Services Grid -->
-            <div class="grid md:grid-cols-3">
+            <div class="grid md:grid-cols-3 gap-8">
                 <!-- Software Development -->
                 <div class="text-center">
-                    <div style="padding: 17px;">
-                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                    <h2 class="text-xl text-gray-800 text-[24px] mb-4">
                             Software Development
                         </h2>
-                    </div>
-                    <div class="mb-6 flex justify-center" style="padding: 17px;">
-                        <img src="assets/images/service-icon-1.webp" alt="Software Development" class="w-50 h-40 object-contain">
-                    </div>
-                    <div style="padding: 17px; border-radius: 8px;">
-                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
-                            Our team of talented developers and designers will help you define your<br> software development project's <br>scope and see the project through <br>from start to finish.
+                    <img src="assets/images/service-icon-1.webp" alt="Software Development" class="w-50 h-40 object-contain mx-auto mb-4">
+                    <p class="text-gray-600 mb-4 leading-relaxed text-[17px]">
+                        Our team of talented developers and designers will help you define your software development project's scope and see the project through from start to finish.
                         </p>
-                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
-                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
+                        <p class="text-gray-600 text-[16px]">
+                            <a href="software-development.html" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="software-development.html" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
                         </p>
-                    </div>
                 </div>
 
                 <!-- GenAI Development -->
                 <div class="text-center">
-                    <div style="padding: 17px;">
-                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                    <h2 class="text-xl text-gray-800 text-[24px] mb-4">
                             GenAI Development
                         </h2>
-                    </div>
-                    <div class="mb-6 flex justify-center" style="padding: 17px;">
-                        <img src="assets/images/service-icon-2.webp" alt="GenAI Development" class="w-50 h-40 object-contain" style="background: transparent; mix-blend-mode: multiply;">
-                    </div>
-                    <div style="padding: 17px; border-radius: 8px;">
-                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
-                            GenAI has transformed technology<br> and challenged businesses. At NNG,<br> GenAI development helps companies<br> to achieve efficiency, innovation, and competitive advantages
+                    <img src="assets/images/service-icon-2.webp" alt="GenAI Development" class="w-50 h-40 object-contain mx-auto mb-4">
+                    <p class="text-gray-600 mb-4 leading-relaxed text-[17px]">
+                        GenAI has transformed technology and challenged businesses. At NNG, GenAI development helps companies to achieve efficiency, innovation, and competitive advantages
+                    </p>
+                        <p class="text-gray-600 text-[16px]">
+                            <a href="genai-development.html" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="genai-development.html" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
                         </p>
-                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
-                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
-                        </p>
-                    </div>
                 </div>
 
                 <!-- Microsoft Solutions -->
                 <div class="text-center">
-                    <div style="padding: 17px;">
-                        <h2 class="text-xl text-gray-800" style="font-family: 'Poppins'; font-size: 24px;">
+                    <h2 class="text-xl text-gray-800 text-[24px] mb-4">
                             Microsoft Solutions
                         </h2>
-                    </div>
-                    <div class="mb-6 flex justify-center" style="padding: 17px;">
-                        <img src="assets/images/service-icon-3.webp" alt="Microsoft Solutions" class="w-50 h-40 object-contain" style="background: transparent; mix-blend-mode: multiply;">
-                    </div>
-                    <div style="padding: 17px; border-radius: 8px;">
-                        <p class="text-gray-600 mb-4 leading-relaxed" style="font-family: 'Poppins'; font-size: 16px;">
-                            We utilize Microsoft technologies to<br> assist businesses in optimizing ICT<br> solutions, enhancing security, and <br>driving digital and AI transformation, <br>ensuring long-term success.
+                    <img src="assets/images/service-icon-3.webp" alt="Microsoft Solutions" class="w-50 h-40 object-contain mx-auto mb-4">
+                    <p class="text-gray-600 mb-4 leading-relaxed text-[17px]">
+                        We utilize Microsoft technologies to assist businesses in optimizing ICT solutions, enhancing security, and driving digital and AI transformation, ensuring long-term success.
                         </p>
-                        <p class="text-gray-600" style="font-family: 'Poppins'; font-size: 16px;">
-                            <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="#" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
+                        <p class="text-gray-600 text-[16px]">
+                            <a href="microsoft-solutions.html" class="text-gray-800 hover:text-red-500 transition-colors">Learn More</a> <a href="microsoft-solutions.html" class="text-gray-800 hover:text-red-500 transition-colors">››</a>
                         </p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="relative flex items-center justify-center text-white w-full" style="height: 650px;">
+    <section class="relative flex items-center justify-center text-white w-full h-[650px]">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0">
             <img src="assets/images/testimonials.webp" alt="Testimonial Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.5)]"></div>
         </div>
         
         <!-- Content -->
-        <div class="relative z-10 text-center px-8 max-w-4xl mx-auto">
-            <h2 style="font-family: 'Poppins', sans-serif; font-size: 60px;">
+        <div class="relative z-10 text-center p-8 max-w-4xl mx-auto">
+            <h2 class="text-[60px]">
                 Customers are saying...
             </h2>
             
-            <blockquote class="mb-5 mt-5" style="font-family: 'Poppins', sans-serif; font-size: 26px;">
+            <blockquote class="mb-5 mt-5 text-[26px]">
                 I have had a great experience working with the NNG team for the past three years. They are always responsive and show great leadership.
             </blockquote>
             
-            <p class="mb-5 mt-5" style="font-family: 'Poppins', sans-serif; font-size: 26px;">
+            <p class="mb-5 mt-5 text-[26px]">
                 Hanh Nguyen | CEO VBA-ADK Vietnam
             </p>
             
-            <button class="border-2 border-white px-8 py-3 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer mb-4 mt-4" style="font-family: 'Poppins', sans-serif;">
+            <button class="border-2 border-white px-8 py-3 font-medium uppercase hover:bg-white hover:text-black transition-all duration-300 cursor-pointer mb-4 mt-4">
                 MORE
             </button>
         </div>
     </section>
 
-    <script>
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const spans = mobileToggle.querySelectorAll('span');
-        
-        mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Animate hamburger icon
-            if (!mobileMenu.classList.contains('hidden')) {
-                spans[0].style.transform = 'rotate(45deg) translate(8px, 8px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
+    <!-- Our Sample Projects Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-8">
+            <!-- Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl text-gray-800">
+                    Our Sample Projects
+                </h2>
+            </div>
 
-        // Services mobile dropdown toggle
-        const servicesMobileToggle = document.getElementById('servicesMobileToggle');
-        const servicesMobileMenu = document.getElementById('servicesMobileMenu');
-        
-        servicesMobileToggle.addEventListener('click', () => {
-            servicesMobileMenu.classList.toggle('hidden');
-        });
-    </script>
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4">
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-1.webp" alt="Project 1" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-2.webp" alt="Project 2" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-3.webp" alt="Project 3" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-4.webp" alt="Project 4" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-5.webp" alt="Project 5" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-6.webp" alt="Project 6" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-7.webp" alt="Project 7" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex justify-center w-52 h-52">
+                    <img src="assets/images/logo-project/logo-project-8.webp" alt="Project 8" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Line Separator -->
+    <div class="max-w-7xl mx-auto px-8">
+        <hr class="border-t border-gray-300 my-12">
+    </div>
+
+    <!-- Our Accreditations Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <!-- Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl text-gray-800">
+                    Our Accreditations
+                </h2>
+            </div>
+
+            <!-- Accreditations Image -->
+            <div class="flex justify-center">
+                <img src="assets/images/logo-project/logo-partner.webp" alt="Our Accreditations" class="max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Footer Section -->
+    <section class="bg-red-600">
+        <div class="max-w-[1020px] mx-auto h-[148px] px-8 grid items-center">
+            <div class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center w-full gap-4">
+                <!-- Text -->
+                <div class="p-[17px]">
+                    <h1 class="text-white text-[32px]">Have a project in mind?</h1>
+                </div>
+                
+                <!-- Button -->
+                <div>
+                    <a href="/contact" class="inline-block bg-gray-800 hover:bg-gray-900 text-white uppercase px-11 py-4 transition-colors duration-300 text-[15px] tracking-[3px]">
+                        CONTACT US
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white/40 selection:bg-black selection:text-white">
+        <div class="max-w-[1020px] mx-auto py-16 px-8">
+            <!-- Top Contact Line -->
+            <div class="mb-16">
+                <span class="text-white text-[13px] font-sans tracking-[3px]">NNG COMPANY LIMITED +84 90 8345880 BUSINESS@NNG.COM.VN</span>
+            </div>
+            
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- Vietnam - 4 columns -->
+                <div class="md:col-span-4">
+                    <h3 class="font-bold text-lg mb-4">Vietnam</h3>
+                    <p class="text-base my-4">Business Office: 02 Grand 1, The Peak Garden Villa. 600 Nguyen Luong Bang Street, Tan My Ward, Ho Chi Minh City</p>
+                    <p class="text-base mt-4">Registered Office: S502, Floor 5, Sabay Building. No. 5 Dong Nai Street, Tan Son Hoa Ward, Ho Chi Minh City</p>
+                </div>
+
+                <!-- Singapore & Japan - 4 columns -->
+                <div class="md:col-span-4">
+                    <h3 class="font-bold text-lg mb-4">Singapore</h3>
+                    <p class="text-base my-4">NNG IT SOLUTIONS PTE. LTD.</p>
+                    <p class="text-base my-4">18 Sin Ming Lane #07-13 Midview City Singapore 573960</p>
+                    <h3 class="font-bold text-lg mb-4 mt-6">Japan</h3>
+                    <p class="text-base mt-4">Room 602, Floor 6, 2-5-5 Showa Town, Kita Ward, Tokyo</p>
+                </div>
+
+                <!-- Social Networks - 2 columns -->
+                <div class="md:col-span-2">
+                    <h3 class="font-bold text-lg mb-4">Social Networks</h3>
+                    <div class="flex space-x-4 mt-10">
+                        <a href="https://www.facebook.com/nngit/" target="_blank" class="hover:opacity-70 transition-opacity text-white">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/nngit/" target="_blank" class="hover:opacity-70 transition-opacity text-white">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Customer Service - 2 columns -->
+                <div class="md:col-span-2">
+                    <h3 class="font-bold text-lg mb-4">Customer Service</h3>
+                    <div class="mt-8">
+                        <a href="https://nn9.atlassian.net/servicedesk/customer/portals" target="_blank" rel="noopener noreferrer" class="inline-block">
+                            <img src="https://images.squarespace-cdn.com/content/553aa1cce4b06f8ca0c4e312/461a9da7-f2da-4a4d-89b0-c73b2e43b91d/Screenshot+2025-03-11+at+09.51.55.png?content-type=image%2Fpng" 
+                                 alt="Jira logo" 
+                                 class="w-8 h-auto">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
